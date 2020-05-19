@@ -15,6 +15,7 @@ import os
 import pandas as pd
 from parlai.core.opt import Opt
 from parlai.core.teachers import DialogTeacher
+from parlai.utils.misc import warn_once
 
 import parlai.tasks.taskmaster2.build as build_
 
@@ -42,6 +43,9 @@ class _Abstract(DialogTeacher):
         opt['datafile'] = self.fold
         self.dpath = os.path.join(opt['datapath'], 'taskmaster-2')
         if shared is None:
+            warn_once(
+                "Taskmaster2 is a beta dataset, and format may significantly change."
+            )
             build_.build(opt)
         super().__init__(opt, shared)
 
