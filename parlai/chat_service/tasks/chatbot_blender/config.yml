@@ -4,8 +4,8 @@ tasks:
     task_world: MessengerBotChatTaskWorld
     timeout: 1800
     agents_required: 1
-task_name: chatbot
-world_module: parlai.chat_service.tasks.chatbot.worlds
+task_name: chatbot_blender
+world_module: parlai.chat_service.tasks.chatbot_blender.worlds
 overworld: MessengerOverworld
 max_workers: 30
 opt:
