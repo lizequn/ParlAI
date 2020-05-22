@@ -16,7 +16,7 @@ from typing import Dict, Any
 
 import json
 
-HOST_NAME = 'localhost'
+HOST_NAME = '0.0.0.0'
 PORT = 8080
 
 SHARED: Dict[Any, Any] = {}
